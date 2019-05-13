@@ -22,6 +22,8 @@ public protocol SyntaxTextViewDelegate: class {
     func didChangeSelectedRange(_ syntaxTextView: SyntaxTextView, selectedRange: NSRange)
 
     func textViewDidBeginEditing(_ syntaxTextView: SyntaxTextView)
+    
+    func textViewDidEndEditing(_ syntaxTextView: SyntaxTextView)
 
     func lexerForSource(_ source: String) -> Lexer
 
@@ -34,6 +36,8 @@ public extension SyntaxTextViewDelegate {
     func didChangeSelectedRange(_ syntaxTextView: SyntaxTextView, selectedRange: NSRange) { }
 
     func textViewDidBeginEditing(_ syntaxTextView: SyntaxTextView) { }
+    
+    func textViewDidEndEditing(_ syntaxTextView: SyntaxTextView) { }
 }
 
 struct ThemeInfo {
